@@ -4,9 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            margin: 0cm;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F2CEA2;
+
+        }
+
+        #menu2 {
+            margin: 10px;
+            text-align: center;
+
+        }
+
+        .ubi {
+            padding: 10px;
+            width: 1000px;
+            border: 1px solid #a6826300;
+            border-radius: 20px;
+            background-color: #734c2965;
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifS;
+        }
+
+        .cajaTitulo {
+            width: 100%;
+            display: flex;
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight:600;
+        }
+
+        .titleUbi {
+            flex-shrink: 0;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .caja {
+            width: 100%;
+            padding-top: 30px;
+            padding-left: 10px;
+            flex-grow: 1;
+        }
+
+        hr {
+
+            border: 0;
+            height: 2px;
+            background-color: black;
+            width: 100%;
+            margin: 0;
+        }
+
+        .map {
+            margin-top: 10px;
+            border-radius: 10%;
+            margin-bottom: 10px;
+        }
+
+        .contInfo {
+            margin-top: 5px;
+            box-sizing: content-box;
+            box-sizing: border-box;
+            width: 400px;
+            padding: 5px;
+        }
+
+        .infoUbi {
+            border: 5px outset #0705039a;
+            border-radius: 10px;
+            box-sizing: content-box;
+            box-sizing: border-box;
+            width: 370px;
+            padding: 10px;
+            background-color: #a67146c9;
+            margin-left: 10px;
+            height: 100px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            transition: border 0.1s ease-out;
+        }
+        .infoUbi:hover {
+            border: inset #0705039a;
+            
+        }
+        .infoUbi p {
+            width: 100%;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .infoUbi img {
+            height: 40px;
+            width: auto;
+        }
+    </style>
 </head>
 <body>
-    <a href="file:///C:/Users/zalaz/Documents/GitHub/belleal7.github.io/formulario.html"><p> Pagina nueva</p></a>
-    <p style="border: solid green 10px">Probando esto</p>
+    <div id="menu2">
+        <div class="ubi">
+            <div class="cajaTitulo">
+                <h1 class="titleUbi">Sobre Nosotros</h1>
+                <div class="caja">
+                    <hr>
+                </div>
+            </div>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d524.22248938756!2d-66.35138273068672!3d-33.31397146250404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d43be14aea83bd%3A0x873da7b12fcb6ad0!2sRawson%20126%2C%20San%20Luis%2C%20Argentina!5e1!3m2!1ses!2sus!4v1716073756579!5m2!1ses!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="contInfo">
+                <div class="infoUbi">
+                    <div><img src="Imagenes/ubicacion.png" alt=""></div>
+                    <p>Sede Central en San Luis</p>
+                </div>
+                <div class="infoUbi">
+                    <img src="Imagenes/experiencia.png" alt="">
+                    <p>Mas de 10 años de Experiencia</p>
+                </div>
+                <div class="infoUbi">
+                    <img src="Imagenes/arquitecto.png" alt="">
+                    <p>Contactate con nuestros profecionales</p>
+                </div>
+                <div class="infoUbi">
+                    <img src="Imagenes/correo-de-contacto.png" alt="">
+                    <p>Atencion personalizada</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
