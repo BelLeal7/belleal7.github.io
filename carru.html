@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contImg {
+            width: 600px;
+            height: 450px;
+            position: relative;
+            left: 33%;
+            box-sizing: border-box;
+            box-sizing: content-box;
+        }
+
+        .img {
+            width: 600px;
+            height: 450px;
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .boton-left {
+            position: absolute;
+            left: -30px;
+            top: 45%;
+            background: transparent;
+            background-image: url('Imagenes/flecha-correcta - copia.png');
+            background-size: cover;
+            border: none;
+            width: 50px;
+            height: 50px;
+        }
+
+        #right:hover,#left:hover {
+            opacity: 0.8;
+        }
+        
+        .boton-right {
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            background: transparent;
+            background-image: url('Imagenes/flecha-correcta.png');
+            background-size: cover;
+            border: none;
+            width: 50px;
+            height: 50px;
+        }
+
+        .cont p {
+            font-family: sans-serif;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contImg"><img class="img" src="Imagenes\pexels-pixabay-206359.jpg">
+        <div class="cont">
+            <p id="cont"></p>
+        </div>
+        <div class="contRight">
+            <input type="button" id="right" class="boton-right" >
+        </div>
+        <div class="contLeft">
+            <input type="button" id="left" class="boton-left">
+        </div>
+    </div>
+    <script>
+        let img = ['Imagenes/pexels-pixabay-206359.jpg',
+            'Imagenes/pexels-souvenirpixels-417074.jpg',
+            'Imagenes/pexels-casia-charlie-1270232-2433467.jpg',
+        ]
+       
+        let cont = 0;
+        document.getElementById('cont').innerHTML=(cont+1)+"/"+img.length;
+
+        document.getElementById('right').onclick = function(){
+            if((cont+1)<img.length){
+                cont++;
+                document.getElementsByClassName('img')[0].src = img[cont];
+            }else{
+                cont=0;
+                document.getElementsByClassName('img')[0].src = img[cont];
+            }
+            document.getElementById('cont').innerHTML=(cont+1)+"/"+img.length;
+        }
+            
+        document.getElementById('left').onclick = function(){
+            if(cont==0){
+                cont=img.length-1;
+                document.getElementsByClassName('img')[0].src = img[cont];
+            }else{
+                cont--;
+                document.getElementsByClassName('img')[0].src = img[cont];
+            }
+            document.getElementById('cont').innerHTML=(cont+1)+"/"+img.length;
+        }
+
+        
+    </script>
+</body>
+
+</html>
