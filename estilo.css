@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  background-color: #f2cea2;
+  width: 100%;
+  height: 100%;
+}
+
+.inicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #eb8832d8;
+  padding: 0%;
+  height: 15mm;
+  color: black;
+}
+
+.inici {
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10%;
+  border: #c78760;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: larger;
+
+  
+}
+
+.inici:hover {
+  background-color: #c78753;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+.portada {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#menu2 {
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ubi {
+  padding: 10px;
+  width: 1000px;
+  border: 1px solid #a6826300;
+  border-radius: 20px;
+  background-color: #734c2965;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serifS;
+}
+
+.cajaTitulo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.titleUbi {
+  flex-shrink: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.caja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 10px;
+  flex-grow: 1;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-color: black;
+  width: 100%;
+  margin: 0;
+}
+
+.map {
+  margin-top: 10px;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+
+.contInfo {
+  margin-top: 5px;
+  box-sizing: content-box;
+  box-sizing: border-box;
+  width: 400px;
+  padding: 5px;
+}
+
+.infoUbi {
+  border: 5px outset #0705039a;
+  border-radius: 10px;
+  box-sizing: content-box;
+  box-sizing: border-box;
+  width: 370px;
+  padding: 10px;
+  background-color: #a67146c9;
+  margin-left: 10px;
+  height: 100px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  transition: border 0.1s ease-out;
+  flex-grow: 1;
+}
+.infoUbi:hover {
+  border: inset #0705039a;
+}
+.infoUbi p {
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+}
+
+.infoUbi img {
+  height: 40px;
+  width: auto;
+}
