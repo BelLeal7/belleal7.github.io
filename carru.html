@@ -5,107 +5,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .contImg {
-            width: 600px;
-            height: 450px;
-            position: relative;
-            left: 33%;
-            box-sizing: border-box;
-            box-sizing: content-box;
-        }
-
-        .img {
-            width: 600px;
-            height: 450px;
-            position: absolute;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .boton-left {
-            position: absolute;
-            left: -30px;
-            top: 45%;
-            background: transparent;
-            background-image: url('Imagenes/flecha-correcta - copia.png');
-            background-size: cover;
-            border: none;
-            width: 50px;
-            height: 50px;
-        }
-
-        #right:hover,#left:hover {
-            opacity: 0.8;
-        }
-        
-        .boton-right {
-            position: absolute;
-            right: -30px;
-            top: 50%;
-            background: transparent;
-            background-image: url('Imagenes/flecha-correcta.png');
-            background-size: cover;
-            border: none;
-            width: 50px;
-            height: 50px;
-        }
-
-        .cont p {
-            font-family: sans-serif;
-            position: absolute;
-            left: 0;
-            top: 0;
-            margin: 0;
-            padding: 5px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
-    <div class="contImg"><img class="img" src="Imagenes\pexels-pixabay-206359.jpg">
-        <div class="cont">
-            <p id="cont"></p>
-        </div>
-        <div class="contRight">
-            <input type="button" id="right" class="boton-right" >
-        </div>
-        <div class="contLeft">
-            <input type="button" id="left" class="boton-left">
-        </div>
+
+    <div class="inicio">
+        <a href="index.html"><img class="logo" src="Imagenes\inicio2.jpg"></p></a>
+        <p class="inici">Servicios</p>
+        <p class="inici">Consultas</p>
+        <p class="inici">Contacto</p>
+        <a href="carru.html" style="color: black; text-decoration: none; ">
+            <p class="inici">Obras</p>
+        </a> <!--prueba para el linkeo-->
     </div>
+
+    <h1>Conoce nuestro Trabajo</h1>
+
+    <article class="articulo">
+        <div class="contImg"><img class="img" src="Imagenes\pexels-pixabay-206359.jpg">
+            <div class="cont">
+                <p id="cont"></p>
+            </div>
+            <div class="contRight">
+                <input type="button" id="right" class="boton-right">
+            </div>
+            <div class="contLeft">
+                <input type="button" id="left" class="boton-left">
+            </div>
+        </div>
+        <section class="infoImg">
+            <ul>
+                <li class="elem">Renová y rejuvenecé tu baño con nuestra remodelación de baños. Nos enfocamos en cada
+                    detalle para
+                    reflejar tu estilo y adaptarlo a tus necesidades.</li>
+            </ul>
+        </section>
+    </article>
+
+    <article class="articulo" class="baño">
+        <div class="contImg"><img class="img" src="Imagenes\Carruseles\Baño\bañoAntes1.jpg">
+            <div class="cont">
+                <p id="cont"></p>
+            </div>
+            <div class="contRight">
+                <input type="button" id="right" class="boton-right">
+            </div>
+            <div class="contLeft">
+                <input type="button" id="left" class="boton-left">
+            </div>
+        </div>
+        <section class="infoImg">
+            <ul>
+                <li class="elem">Renová y rejuvenecé tu baño con nuestra remodelación de baños. Nos enfocamos en cada
+                    detalle para
+                    reflejar tu estilo y adaptarlo a tus necesidades.</li>
+            </ul>
+        </section>
+    </article>
+
+
+
     <script>
+        const carruseles = document.querySelectorAll('.articulo');
+        let num=0;
         let img = ['Imagenes/pexels-pixabay-206359.jpg',
             'Imagenes/pexels-souvenirpixels-417074.jpg',
             'Imagenes/pexels-casia-charlie-1270232-2433467.jpg',
         ]
-       
-        let cont = 0;
-        document.getElementById('cont').innerHTML=(cont+1)+"/"+img.length;
-
-        document.getElementById('right').onclick = function(){
-            if((cont+1)<img.length){
-                cont++;
-                document.getElementsByClassName('img')[0].src = img[cont];
-            }else{
-                cont=0;
-                document.getElementsByClassName('img')[0].src = img[cont];
-            }
-            document.getElementById('cont').innerHTML=(cont+1)+"/"+img.length;
-        }
+        let img2 = ['Imagenes/Carruseles/Baño/bañoAntes1.jpg',
+        'Imagenes/Carruseles/Baño/bañoDespues1.jpg'
+        ]
+        carrusel(carruseles,img,num);
+        num++;
+        carrusel(carruseles,img2,num);
+        function carrusel(carruseles,img,num){
+            console.log(carruseles);
+            console.log(img[0]);
+            console.log(num);
+            let cont = 0;
+            const contDisplay = document.querySelectorAll('.cont');
+            console.log(contDisplay[0]);
+            contDisplay[num].innerHTML = (cont + 1) + "/" + img.length;
             
-        document.getElementById('left').onclick = function(){
-            if(cont==0){
-                cont=img.length-1;
-                document.getElementsByClassName('img')[0].src = img[cont];
-            }else{
-                cont--;
-                document.getElementsByClassName('img')[0].src = img[cont];
-            }
-            document.getElementById('cont').innerHTML=(cont+1)+"/"+img.length;
-        }
+            carruseles[num].querySelector('.boton-right').onclick = function () {
+                if ((cont + 1) < img.length) {
+                    cont++;
+                } else {
+                    cont = 0;
+                }
+                carruseles[num].querySelector('.img').src = img[cont];
+                contDisplay[num].innerHTML = (cont + 1) + "/" + img.length;
+            };
+
+            carruseles[num].querySelector('.boton-left').onclick = function () {
+                if (cont == 0) {
+                    cont = img.length - 1;
+                } else {
+                    cont--;
+                };
+                carruseles[num].querySelector('.img').src = img[cont];
+                contDisplay[num].innerHTML = (cont + 1) + "/" + img.length;
+            };
 
         
+        };
+            
+
     </script>
 </body>
 
