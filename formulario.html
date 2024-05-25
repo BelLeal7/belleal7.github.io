@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>formulario</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
-    <p>hola</p>
+    <div class="inicio">
+        <a href="index.html"><img class="logo" src="Imagenes\inicio2.jpg"></p></a>
+        <p class="inici">Servicios</p>
+        <p class="inici">Consultas</p>
+        <a href="index.html#menu2" style="color: black; text-decoration: none; ">
+            <p class="inici">Contacto</p>
+        </a>
+        <a href="carru.html" style="color: black; text-decoration: none; ">
+            <p class="inici">Obras</p>
+        </a>
+        <!--prueba para el linkeo-->
+    </div>
+
+
+    <div class="mitadFormulario">
+        <img src="" alt="">
+    </div>
+
+    <div class="formu">
+        <form onsubmit="return validar()  ">
+            <div class="contenedor">
+                <label for="nombre"> Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div class="contenedor">
+                <label for="email"> Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="contenedor">
+                <label for="tipoConsulta"> Tipo de consulta es:</label>
+                <select name="tipoConsulta" id="tipoConsulta">
+                    <option value="Precio">Cotizacion de una remodelación o construcción</option>
+                    <option value="Tiempo">Tiempo estimado de una remodelación o construcción</option>
+                    <!--se peude linkear,si se detecta que envio este formulacio
+                     a un apartado o pagina de tiempos estimados por tamaño
+                     de construcion-->
+                    <option value="Profe">Consulta personalizada con una profesional</option>
+                    <option value="Materiales">Materiales que utilizamos</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div class="contenedor">
+                <label for="consulta"> Habitacion a remodelar o construir:</label>
+                <select name="consulta" id="consulta">
+                    <option value="Comedor">Comedor</option>
+                    <option value="Baño">Baño</option>
+                    <option value="Terraza">Terraza</option>
+                    <option value="Cocina">Cocina</option>
+                    <option value="SalaDeEstar">Sala de estar</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="contenedor">
+                <label for="tamano"> Tamaño de la habitacion a remodelar o construir :</label>
+                <select name="tamano" id="tamano">
+                    <option value="chica">Pequeña</option>
+                    <option value="mediana">Mediana</option>
+                    <option value="estandar">Estandar</option>
+                    <option value="grande">Grande</option>
+                    <option value="enorme">Enorme</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div class="contenedor">
+                <label for="texto"> Deja un comentario para mas informacion sobre tu proyecto</label>
+                <input type="text" name="texto" id="texto">
+            </div>
+            <div class="botonEnviar"> 
+                <button type="submit">Enviar</button>
+            </div>
+        </form> 
+    </div>
+
 </body>
+
 </html>
