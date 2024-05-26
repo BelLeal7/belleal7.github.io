@@ -173,11 +173,28 @@ body {
 }
 
 .Pie {
+  margin-top: 60px;
   background-color: #AB7A4F;
   height: 400px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   position: relative;
   bottom: 0px;
+}
+
+.pieLogo{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 200px;
+}
+.pieLogo img{
+  width: 100%;
+}
+.pieItems{
+
 }
 
 /*-----------------------------------CARRUSEL-------------------------------- */
