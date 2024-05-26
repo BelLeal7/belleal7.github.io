@@ -20,10 +20,10 @@
         </a> <!--prueba para el linkeo-->
     </div>
 
-    <h1>Conoce nuestro Trabajo</h1>
+    <h1 class="tituloCarru">Conoce nuestro Trabajo</h1>
 
     <article class="articulo">
-        <div class="contImg"><img class="img" src="Imagenes\pexels-pixabay-206359.jpg">
+        <div class="contImg"><img class="img" src="Imagenes\Carruseles\Cocina\cocinaAntes1.jpg">
             <div class="cont">
                 <p id="cont"></p>
             </div>
@@ -34,16 +34,18 @@
                 <input type="button" id="left" class="boton-left">
             </div>
         </div>
+        <h2 class="elemTitle">COCINA</h2>
         <section class="infoImg">
             <ul>
-                <li class="elem">Renová y rejuvenecé tu baño con nuestra remodelación de baños. Nos enfocamos en cada
-                    detalle para
-                    reflejar tu estilo y adaptarlo a tus necesidades.</li>
+                <li class="elem">La remodelación de cocina es emocionante y puede transformar tu hogar. Actualizá el
+                    estilo, mejora la funcionalidad y aumentá el valor de tu propiedad con un proyecto personalizado.
+                </li>
             </ul>
         </section>
+        
     </article>
 
-    <article class="articulo" class="baño">
+    <article class="articulo" id="izq">
         <div class="contImg"><img class="img" src="Imagenes\Carruseles\Baño\bañoAntes1.jpg">
             <div class="cont">
                 <p id="cont"></p>
@@ -55,6 +57,7 @@
                 <input type="button" id="left" class="boton-left">
             </div>
         </div>
+        
         <section class="infoImg">
             <ul>
                 <li class="elem">Renová y rejuvenecé tu baño con nuestra remodelación de baños. Nos enfocamos en cada
@@ -62,24 +65,81 @@
                     reflejar tu estilo y adaptarlo a tus necesidades.</li>
             </ul>
         </section>
+        <h2 class="elemTitle" style="left: 60px;">BAÑO</h2>
     </article>
 
+    <article class="articulo">
+        <div class="contImg"><img class="img" src="Imagenes\Carruseles\Ampliaciones\ampliacion1.jpg">
+            <div class="cont">
+                <p id="cont"></p>
+            </div>
+            <div class="contRight">
+                <input type="button" id="right" class="boton-right">
+            </div>
+            <div class="contLeft">
+                <input type="button" id="left" class="boton-left">
+            </div>
+        </div>
+        <h2 class="elemTitle">AMPLIACION</h2>
+        <section class="infoImg">
+            <ul>
+                <li class="elem">Las ampliaciones de espacios mejoran y adaptan tu hogar a tus necesidades cambiantes.
+                    Creá más espacio habitable, agregá una habitación o transformá una zona existente con nuestro
+                    equipo. ¡Hacemos realidad tus ideas!</li>
+            </ul>
+        </section>
+    </article>
 
+    <article class="articulo"  id="izq">
+        <div class="contImg"><img class="img" src="Imagenes\Carruseles\Construcciones\construccionesAntes1.jpg">
+            <div class="cont">
+                <p id="cont"></p>
+            </div>
+            <div class="contRight">
+                <input type="button" id="right" class="boton-right">
+            </div>
+            <div class="contLeft">
+                <input type="button" id="left" class="boton-left">
+            </div>
+        </div>
+        <section class="infoImg">
+            <ul>
+                <li class="elem">Las construcciones son clave en la remodelación, permitiendo transformar y adaptar el
+                    espacio según nuestras necesidades. Ampliá tu hogar, agregá habitaciones o construí estructuras
+                    adicionales con nuestro equipo.</li>
+            </ul>
+        </section>
+        <h2 class="elemTitle" style="left: 60px;">CONSTRUCCIONES</h2>
+    </article>
 
     <script>
         const carruseles = document.querySelectorAll('.articulo');
-        let num=0;
-        let img = ['Imagenes/pexels-pixabay-206359.jpg',
-            'Imagenes/pexels-souvenirpixels-417074.jpg',
-            'Imagenes/pexels-casia-charlie-1270232-2433467.jpg',
+        let img = ['Imagenes/Carruseles/Cocina/cocinaAntes1.jpg',
+            'Imagenes/Carruseles/Cocina/cocinaDespues1.jpg',
+            'Imagenes/Carruseles/Cocina/cocinaAntes2.jpg',
+            'Imagenes/Carruseles/Cocina/cocinaDespues2.jpg'
         ]
         let img2 = ['Imagenes/Carruseles/Baño/bañoAntes1.jpg',
-        'Imagenes/Carruseles/Baño/bañoDespues1.jpg'
+            'Imagenes/Carruseles/Baño/bañoDespues1.jpg',
+            'Imagenes/Carruseles/Baño/bañoAntes2.jpg',
+            'Imagenes/Carruseles/Baño/bañoDespues2.jpg'
         ]
-        carrusel(carruseles,img,num);
-        num++;
-        carrusel(carruseles,img2,num);
-        function carrusel(carruseles,img,num){
+        let img3 = ['Imagenes/Carruseles/Ampliaciones/ampliacion1.jpg',
+            'Imagenes/Carruseles/Ampliaciones/ampliacion2.jpg',
+            'Imagenes/Carruseles/Ampliaciones/ampliacion3.jpg',
+            'Imagenes/Carruseles/Ampliaciones/ampliacion4.jpg'
+        ]
+        let img4 = ['Imagenes/Carruseles/Construcciones/construccionesAntes1.jpg',
+            'Imagenes/Carruseles/Construcciones/construccionesDespues1.jpg',
+            'Imagenes/Carruseles/Construcciones/construccionesAntes2.jpg',
+            'Imagenes/Carruseles/Construcciones/construccionesDespues2.jpg'
+
+        ]
+        carrusel(carruseles, img, 0);
+        carrusel(carruseles, img2, 1);
+        carrusel(carruseles, img3, 2);
+        carrusel(carruseles, img4, 3);
+        function carrusel(carruseles, img, num) {
             console.log(carruseles);
             console.log(img[0]);
             console.log(num);
@@ -87,7 +147,7 @@
             const contDisplay = document.querySelectorAll('.cont');
             console.log(contDisplay[0]);
             contDisplay[num].innerHTML = (cont + 1) + "/" + img.length;
-            
+
             carruseles[num].querySelector('.boton-right').onclick = function () {
                 if ((cont + 1) < img.length) {
                     cont++;
@@ -108,9 +168,9 @@
                 contDisplay[num].innerHTML = (cont + 1) + "/" + img.length;
             };
 
-        
+
         };
-            
+
 
     </script>
 </body>
