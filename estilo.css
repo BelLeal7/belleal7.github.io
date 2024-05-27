@@ -253,6 +253,7 @@ body {
 }
 
 .articulo {
+  min-width: 1180px;
   padding-bottom: 50px;
   border-bottom: 1px solid black;
   position: relative;
@@ -275,7 +276,7 @@ body {
 
 .elemTitle {
   position: absolute;
-  top: 1fr;
+  top: 20px;
   right: 60px;
   font-size: 50px;
 }
