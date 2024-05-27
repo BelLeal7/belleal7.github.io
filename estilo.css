@@ -7,6 +7,7 @@ body {
   background-color: #f2cea2;
   width: 100%;
   height: 100%;
+  min-width: 1600px;
 }
 
 .inicio {
@@ -73,17 +74,32 @@ body {
   height: auto;
 }
 
+.Titulo{
+  font-family:"Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serifS;
+  font-size: 60px;
+  color: rgb(0, 0, 0);
+  width: 600px;
+  height: 100px;
+  position: absolute;
+  right: 5%;
+  bottom: 65%;
+  text-align: start;
+  align-content: center;
+  text-shadow: 0 0 3px #00000080;
+}
 .atajo{
   font-family:"Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serifS;
   font-size: small;
   background-color: black;
   color: rgba(255, 255, 255, 0.329);
+  text-decoration: none;
   width: 200px;
   height: 50px;
   position: absolute;
   right: 20%;
-  bottom: 50%;
+  bottom: 30%;
   text-align: center;
   align-content: center;
   transition: 0.3s;
@@ -210,6 +226,7 @@ body {
   justify-content: space-around;
   position: relative;
   bottom: 0px;
+  font-family: sans-serif;
 }
 
 .pieLogo{
@@ -221,9 +238,7 @@ body {
 .pieLogo img{
   width: 100%;
 }
-.pieItems{
 
-}
 
 /*-----------------------------------CARRUSEL-------------------------------- */
 .tituloCarru {
