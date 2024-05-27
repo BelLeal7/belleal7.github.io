@@ -1,12 +1,12 @@
 const expNombre = /^[a-zA-Z]*$/;
 const expTexto = /^.{0,40}$/;
-const expTelefono = /^[1-9][0-9]{9}$/;
+const expTelefono = /^[1-9][0-9]{8}$/;
 
 function limpiarErrores(event) {
   const actualInput = event.target;
   const actualHermano = actualInput.nextElementSibling;
 
-  if (actualHermano.calssList && actualHermano.calssList.contains("alarmas")) {
+  if (actualHermano && actualHermano.classsList.contains("alarmas")) {
     actualHermano.remove();
     actualInput.classList.remove("inputErroneo");
   }
@@ -26,54 +26,25 @@ function validar(event) {
 
   console.log(nombre, email, tipoConsulta, consulta, tamano, texto);
 
-  if (nombre.value == " " || !expNombre.test(nombre.value)) {
-    const spanError = document.createElement("span");
-    spanError.textContent = "Ingrese un nombre valido";
-    spanError.className = "alarmas"; //css//
+  limpiarErroresPrevios();
 
-    if (nombre.nextSibling.nodeName != "SPAN") {
-      nombre.insertAdjacentElement("afterend", spanError);
-      nombre.classList.add("inputErroneo");
-    }
+  if (nombre.value === " " || !expNombre.test(nombre.value)) {
+    agregarError(nombre, "Ingrese un nombre valido");
     flagError = true;
   }
 
-  if (email.value == " ") {
-    console.log("Error");
-    const spanError = document.createElement("span");
-    spanError.textContent = "Ingrese un email valido";
-    spanError.className = "alarmas"; //css//
-
-    if (email.nextElementSibling?.nodeName != "SPAN") {
-      email.insertAdjacentElement("afterend", spanError);
-      email.calssList.add("inputErroneo");
-    }
+  if (email.value === " ") {
+    agregarError(email, "Ingrese un email valido");
     flagError = true;
   }
 
-  if (telefono.value == "" || !expTelefono.test(telefono.value)) {
-    console.log("Error");
-    const spanError = document.createElement("span");
-    spanError.textContent = "Ingrese un numero de telefono ,sin 0 y 15";
-    spanError.className = "alarmas"; //css//
-
-    if (telefono.nextSibling.nodeName != "SPAN") {
-      telefono.insertAdjacentElement("afterend", spanError);
-      telefono.calssList.add("inputErroneo");
-    }
+  if (telefono.value === "" || !expTelefono.test(telefono.value)) {
+    agregarError(telefono, "Ingrese un numero de telefono, sin 0 y 15");
     flagError = true;
   }
 
-  if (texto.value == "" && !expTexto.test(texto.value)) {
-    console.log("Error");
-    const spanError = document.createElement("span");
-    spanError.textContent = "Limite de 40 caracteres";
-    spanError.className = "alarmas"; //css//
-
-    if (texto.nextSibling.nodeName != "SPAN") {
-      texto.insertAdjacentElement("afterend", spanError);
-      texto.calssList.add("inputErroneo");
-    }
+  if (texto.value === "" && !expTexto.test(texto.value)) {
+    agregarError(texto, "Limite de 40 caracteres");
     flagError = true;
   }
 
@@ -91,6 +62,23 @@ function validar(event) {
   }
 
   return !flagError;
+}
+function limpiarErroresPrevios() {
+  const alertas = document.querySelectorAll(".alarmas");
+  alertas.forEach((alerta) => alerta.remove());
+
+  const inputsErroneos = document.querySelectorAll(".inputErroneo");
+  inputsErroneos.forEach((input) => input.classList.remove("inputErroneo"));
+}
+function agregarError(elemento, mensaje) {
+  let spanError = elemento.nextElementSibling;
+  if (!spanError || spanError.nodeName !== "SPAN") {
+    spanError = document.createElement("span");
+    spanError.textContent = mensaje;
+    spanError.className = "alarmas"; // css
+    elemento.insertAdjacentElement("afterend", spanError);
+  }
+  elemento.classList.add("inputErroneo");
 }
 
 function agregarAlListado(
@@ -118,7 +106,7 @@ function limpiarFormulario() {
   document.getElementById("texto").value = "";
 }
 
-// Event listeners para limpiar errores
 document.getElementById("nombre").addEventListener("input", limpiarErrores);
 document.getElementById("email").addEventListener("input", limpiarErrores);
 document.getElementById("telefono").addEventListener("input", limpiarErrores);
+document.getElementById("formulario").addEventListener("submit", validar);
