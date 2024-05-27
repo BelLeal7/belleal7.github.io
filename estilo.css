@@ -10,9 +10,10 @@ body {
 }
 
 .inicio {
-  position: fixed;
+  top: 0px;
+  z-index: 1;
+  position: fixed ;
   display: flex;
-  position: sticky;
   justify-content: space-between;
   align-items: center;
   justify-content: flex-start;
@@ -25,7 +26,6 @@ body {
 
 .inici {
   padding: 17px;
-  position: sticky;
   text-align: center;
   cursor: pointer;
   border: #c78760;
