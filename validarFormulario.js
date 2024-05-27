@@ -1,6 +1,7 @@
 const expNombre = /^[a-zA-Z]*$/;
 const expTexto = /^.{0,40}$/;
 const expTelefono = /^[1-9][0-9]{9}$/;
+const expMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 function limpiarErrores(event) {
   const actualInput = event.target;
@@ -28,12 +29,12 @@ function validar(event) {
 
   limpiarErroresPrevios();
 
-  if (nombre.value === " " || !expNombre.test(nombre.value)) {
+  if (nombre.value === "" || !expNombre.test(nombre.value)) {
     agregarError(nombre, "Ingrese un nombre valido");
     flagError = true;
   }
 
-  if (email.value === " ") {
+  if (email.value === "" || !expMail.test(email.value)) {
     agregarError(email, "Ingrese un email valido");
     flagError = true;
   }
