@@ -212,4 +212,10 @@ hr {
 
 /*---Formulario--*/
 
- 
+.alertas{
+  color:#c78753;
+  display: block;
+}
+.inputErroneo{
+ background-color: #c78753; 
+}
