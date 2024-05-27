@@ -293,8 +293,7 @@ body {
 
 #right:hover,
 #left:hover {
-  width: 55px;
-  height: 55px;
+  transform: scale(1.1, 1.1);
   opacity: 1;
 }
 
