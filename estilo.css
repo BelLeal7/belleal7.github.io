@@ -344,4 +344,9 @@ body {
 
 /*---Formulario--*/
 
- 
+.alarmas {
+  color: red;
+}
+.inputErroneo {
+  border-color: red;
+}
