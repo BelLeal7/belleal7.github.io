@@ -1,6 +1,6 @@
 const expNombre = /^[a-zA-Z]*$/;
 const expTexto = /^.{0,40}$/;
-const expTelefono = /^[1-9][0-9]{8}$/;
+const expTelefono = /^[1-9][0-9]{9}$/;
 
 function limpiarErrores(event) {
   const actualInput = event.target;
@@ -75,7 +75,7 @@ function agregarError(elemento, mensaje) {
   if (!spanError || spanError.nodeName !== "SPAN") {
     spanError = document.createElement("span");
     spanError.textContent = mensaje;
-    spanError.className = "alarmas"; // css
+    spanError.className = "alarmas"; 
     elemento.insertAdjacentElement("afterend", spanError);
   }
   elemento.classList.add("inputErroneo");

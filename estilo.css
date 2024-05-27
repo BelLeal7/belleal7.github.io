@@ -7,7 +7,6 @@ body {
   background-color: #f2cea2;
   width: 100%;
   height: 100%;
-  
 }
 
 .inicio {
@@ -22,13 +21,13 @@ body {
   width: 100%;
 }
 
-
 .inici {
   padding: 17px;
   text-align: center;
   cursor: pointer;
   border: #c78760;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: medium;
   transition: 0.2s linear;
   text-decoration: none;
@@ -64,7 +63,7 @@ body {
 
   height: 1000px;
   display: block;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .Portada img {
@@ -75,9 +74,9 @@ body {
   height: auto;
 }
 
-.Titulo{
-  font-family:"Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serifS;
+.Titulo {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serifS;
   font-size: 60px;
   color: rgb(0, 0, 0);
   width: 600px;
@@ -89,9 +88,9 @@ body {
   align-content: center;
   text-shadow: 0 0 3px #00000080;
 }
-.atajo{
-  font-family:"Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serifS;
+.atajo {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serifS;
   font-size: small;
   background-color: black;
   color: rgba(255, 255, 255, 0.329);
@@ -108,10 +107,9 @@ body {
   cursor: pointer;
 }
 
-.atajo:hover{
+.atajo:hover {
   transform: scale(1.1, 1.1);
   color: rgb(199, 192, 192);
- 
 }
 
 #menu2 {
@@ -141,7 +139,7 @@ body {
   width: 100%;
   display: flex;
   font-size: large;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 600;
 }
 
@@ -219,7 +217,7 @@ body {
 
 .Pie {
   margin-top: 60px;
-  background-color: #AB7A4F;
+  background-color: #ab7a4f;
   height: 400px;
   width: 100%;
   display: flex;
@@ -230,16 +228,15 @@ body {
   font-family: sans-serif;
 }
 
-.pieLogo{
+.pieLogo {
   display: flex;
   align-items: center;
   height: 100%;
   width: 200px;
 }
-.pieLogo img{
+.pieLogo img {
   width: 100%;
 }
-
 
 /*-----------------------------------CARRUSEL-------------------------------- */
 .tituloCarru {
@@ -260,8 +257,8 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
-
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .contImg {
@@ -299,7 +296,7 @@ body {
   left: -30px;
   top: 45%;
   background: transparent;
-  background-image: url('Imagenes/flecha-correcta - copia.png');
+  background-image: url("Imagenes/flecha-correcta - copia.png");
   background-size: cover;
   border: none;
   width: 50px;
@@ -319,7 +316,7 @@ body {
   right: -30px;
   top: 45%;
   background: transparent;
-  background-image: url('Imagenes/flecha-correcta.png');
+  background-image: url("Imagenes/flecha-correcta.png");
   background-size: cover;
   border: none;
   width: 50px;
@@ -347,71 +344,95 @@ body {
 /*---Formulario--*/
 
 .alarmas {
-  color: red;
+  color: rgb(255, 94, 0);
 }
 .inputErroneo {
-  border-color: red;
+  border-color: rgba(255, 94, 0, 0.938);
 }
 
+.contenedora {
+  margin: 10px;
+  margin-top: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contFormulario {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   width: 60%;
   padding: 10px;
-  border: 1px solid #000;
-  justify-content: center; /* Centra horizontalmente el contenido */
+  border: 1px solid #6b4000;
+  justify-content: center;
   align-items: center;
   justify-content: space-around;
-
   position: relative;
 }
 
 .mitadFormulario {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.mitadFormulario img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .contenedor {
   flex: 1;
+  margin: 0, 25%, 0, 25%;
 }
 
 .contenido {
-  margin-top: 0px; 
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center;/* Ajusta según sea necesario */
+  margin-top: 5%;
+  margin-bottom: 10%;
+  margin-left: 25%;
+  margin-right: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 .contFormulario form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2px;
   flex: 1;
 }
 
 .contFormulario label {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #6b4000;
 }
 
 .contFormulario input,
 .contFormulario select {
   width: 100%;
   padding: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #6b4000;
 }
 
 .contFormulario button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #ff7b00;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
 .contFormulario button:hover {
-  background-color: #0056b3;
+  background-color: #e4740c;
 }
 
 .contFormulario button:focus {
   outline: none;
 }
-
-
